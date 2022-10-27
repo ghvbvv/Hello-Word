@@ -1,6 +1,7 @@
 //Global Variables
 int appWidth, appHeight;
-float ceterWidth, centerHeight, xStart, yStart, widthRect, heightRect 
+float centerWidth, centerHeight, xStart, yStart, widthRect, heightRect
+color black=#000000, white=#FFFFFF, purple=#FA00F6, yellow=#F8FC64;
 //
 void setup() {
   //Declare Display Geometry: square, landscape, portrait
@@ -29,17 +30,31 @@ void setup() {
       println("STOP, is broken");
     }
   }
+  //
+  //If ORIENTATION is wrong ... feedback to change it
+  //if ( orientation==p ) println(instruct);
+  //
   //Population
-  ceterWidth = * 1/2;
-  centerHeight * 1/2;
-  xStart = ceterWidth - (width * 1/4);
-  yStart = centerHeight - (height * 1/4);
-  widthRect = width * 1/2;
-  heightRect = height * 1/2 ;
+  centerWidth = appWidth * 1/2;
+  centerHeight = appHeight * 1/2;
+  xStart = centerWidth - ( appWidth * 1/4 ) ;
+  yStart = centerHeight - ( appHeight * 1/4 ) ;;
+  widthRect = appWidth * 1/2;
+  heightRect = appHeight * 1/2;
 } //End setup
 //
 void draw() {
+  background(); //Gray Scale 0-255]
+  //random(a, b)
+  background( color( random(0, 255), random(255), random(0, 15) ) ); //color(r,g,b), Night mode, casting
+  //Night Mode
+  background(black);
+  //
+  stroke(yellow);
+  fill(purple);
   rect(xStart, yStart, widthRect, heightRect);
+  fill(white);// Reset default
+  stroke(black);//Reset default
 } //End draw
 //
 void keyPressed() {
