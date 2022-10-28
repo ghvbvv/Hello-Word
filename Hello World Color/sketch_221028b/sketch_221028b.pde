@@ -74,6 +74,9 @@ void draw() {
 } //End draw
 //
 void keyPressed() {
+  if ( key=='A' || key=='a' ) grayscale = true;
+  if ( key=='S' || key=='s' ) randomColor = true;
+  if ( key=='W' || key=='w' ) blackBackground = true;
 } //End keyPressed
 //
 void mousePressed() {
