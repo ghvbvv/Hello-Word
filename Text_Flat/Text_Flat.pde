@@ -6,7 +6,7 @@
 int appWidth, appHeight, fontSize;
 float titleX, titleY, titleWidth, titleHeight;
 float footerX, footerY, footerWidth, footerHeight;
-String title = "fart", footer="Drip";
+String title = "WOOHOOa", footer="Drip";
 PFont titleFont;
 color purple=#2C08FF, resetDefaultInk=#FFFFFF; //not Night Mode Friendly
 //
